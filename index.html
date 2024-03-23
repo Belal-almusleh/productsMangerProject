@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Manger</title>
+    <link rel="stylesheet" href="css/product.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/product.css">
+</head>
+<body>
+    <div class="container mt-5 mb-3 ">
+        <header class="text-center">
+            <h1 class="fs-1">CRUDS</h1>
+            <h3 class="fs-4">PRODUCT MANGEMENT SYSTEM</h3>
+        </header>
+        <!--Start Fields-->
+        <section class="fields row mx-xs-3 mx-0 ">
+            <input type="text" id="title" placeholder="Product Title" class="col-12 mt-3 py-1 px-3 " value="">
+            <div class="row col-12 gx-0 d-flex justify-content-between inputs mt-3">
+                <input type="number" id="price" placeholder="Price" class="col-lg-2 col-md-5 me-md-4 me-lg-0 py-1 ps-3 pe-2  price">
+                <input type="number" id="tax" placeholder="Taxes" class="col-lg-2 col-md-5 me-md-4 me-lg-0 py-1 ps-3 pe-2  tax">
+                <input type="number" id="adv" placeholder="Advertisment" class="col-lg-2 col-md-5 me-md-4 me-lg-0 py-1 ps-3 pe-2  adv">
+                <input type="number" id="discount" placeholder="Discount" class="col-lg-2 col-md-5 me-md-4 me-lg-0 py-1 ps-3 pe-2  discount">
+                <div class="col-lg-3 row gx-0 d-flex justify-content-between mt-1 text-center info-details">
+                    <label for="" class="bg-primary col-3 w-25 ms-0 ms-md-3 p-1 rounded-25 total">Total </label>
+                    <div class="text col-8 q-num">0</div>
+                </div>
+            </div>
+            <input type="text" id="counts" placeholder="Product counts" class="col-12 mt-3 py-1 px-3 counts">
+            <input type="text" id="category" placeholder="Product category" class="col-12 mt-3 py-1 px-3 category">
+            <button class="rounded-pill col-lg-6 col-md-9 col-12 mt-4 mx-auto create ">Create</button>
+        </section>
+        <!--End Fields-->
+        <!--Start serach-->
+        <div class="ctrl row mt-4 gx-0">
+            <input type="search" id="search" placeholder="Search" class="col-12  py-1 px-3 mb-3 search" onkeyup="searchData(this.value)">
+            <div class="d-flex justify-content-between flex-wrap">
+                <button type="button" class=" col-md-5 rounded-pill  col-12 my-md-0 my-3 search-title" id="search-title" onclick="searchMode(this.id)">Search By title</button>
+                <button type="button" class=" col-md-5 rounded-pill  col-12 my-md-0 my-3  " id="search-categorey" onclick="searchMode(this.id)">Search by category</button>
+                <button type="button" class="col-12 rounded-pill  col-12  my-3  delete-all">Delete All <span class="num-items">(0)</span></button>
+            </div>
+        </div>
+        <!--End search-->
+        <!--Start tems-->
+        <div class="items table-responsive-md">
+            <table class="table">
+                <thead>
+                    <tr class="text-center">
+                        <th scope="col">ID</th>
+                        <th scope="col">TTILE</th>
+                        <th scope="col">PRICE</th>
+                        <th scope="col">TAX</th>
+                        <th scope="col">ADS</th>
+                        <th scope="col">DISCOUNT</th>
+                        <th scope="col">TOTAL</th>
+                        <th scope="col">CATEGOREY</th>
+                        <th scope="col">UPDATE</th>
+                        <th scope="col">DELETE</th>
+                    </tr>
+
+                </thead>
+                <tbody id="table-body"><!--
+                    <tr class="text-center">
+                        <th scope="row" class="table-row">1</th>
+                        <td>test</td>
+                        <td>test</td>
+                        <td>test</td>
+                        <td>test</td>
+                        <td>test</td>
+                        <td>test</td>
+                        <td>test</td>
+                        <td><button class="rounded-pill col-lg-6 col-md-9 col-12 fs-6 w-100 update-itm px-3">Update</button></td>
+                        <td><button class="rounded-pill col-lg-6 col-md-9 col-12 fs-6 w-100 delete-itm px-3">Delete</button></td>
+                    </tr>
+                    <tr class="text-center">
+                        <th scope="row" class="table-row">1</th>
+                        <td>test</td>
+                        <td>test</td>
+                        <td>test</td>
+                        <td>test</td>
+                        <td>test</td>
+                        <td>test</td>
+                        <td>test</td>
+                        <td><button class="rounded-pill col-lg-6 col-md-9 col-12 fs-6 w-100 update-itm px-3">Update</button></td>
+                        <td><button class="rounded-pill col-lg-6 col-md-9 col-12 fs-6 w-100 delete-itm px-3">Delete</button></td>
+                    </tr>-->    
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    
+    <script src="js/popper.min.js"></script>
+    <script src="js/code.jquery.com_jquery-3.7.0.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/all.min.js"></script>
+    <script src="js/product.js"></script>
+</body>
+</html>
