@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,6 +9,7 @@
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/product.css">
 </head>
+
 <body>
     <div class="container mt-5 mb-3 ">
         <header class="text-center">
@@ -36,8 +38,16 @@
         <div class="ctrl row mt-4 gx-0">
             <input type="search" id="search" placeholder="Search" class="col-12  py-1 px-3 mb-3 search" onkeyup="searchData(this.value)">
             <div class="d-flex justify-content-between flex-wrap">
-                <button type="button" class=" col-md-5 rounded-pill  col-12 my-md-0 my-3 search-title" id="search-title" onclick="searchMode(this.id)">Search By title</button>
-                <button type="button" class=" col-md-5 rounded-pill  col-12 my-md-0 my-3  " id="search-categorey" onclick="searchMode(this.id)">Search by category</button>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" onchange="searchMode(this.id)" id="search-title" name="searchMode" checked>
+                    <label class="form-check-label" for="search-title">Search By title</label>
+                </div>
+
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" onchange="searchMode(this.id)" id="search-categorey" name="searchMode">
+                    <label class="form-check-label" for="search-categorey" checked>Search by category</label>
+                </div>
+
                 <button type="button" class="col-12 rounded-pill  col-12  my-3  delete-all">Delete All <span class="num-items">(0)</span></button>
             </div>
         </div>
@@ -60,7 +70,8 @@
                     </tr>
 
                 </thead>
-                <tbody id="table-body"><!--
+                <tbody id="table-body">
+                    <!--
                     <tr class="text-center">
                         <th scope="row" class="table-row">1</th>
                         <td>test</td>
@@ -84,17 +95,18 @@
                         <td>test</td>
                         <td><button class="rounded-pill col-lg-6 col-md-9 col-12 fs-6 w-100 update-itm px-3">Update</button></td>
                         <td><button class="rounded-pill col-lg-6 col-md-9 col-12 fs-6 w-100 delete-itm px-3">Delete</button></td>
-                    </tr>-->    
+                    </tr>-->
                 </tbody>
             </table>
         </div>
     </div>
 
-    
+
     <script src="js/popper.min.js"></script>
     <script src="js/code.jquery.com_jquery-3.7.0.min.js"></script>
     <script src="js/bootstrap.js"></script>
     <script src="js/all.min.js"></script>
     <script src="js/product.js"></script>
 </body>
+
 </html>
